@@ -1,0 +1,14 @@
+services:
+  default:
+    build:
+      context: jenkins
+    restart: always
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - db:/var/jenkins_home
+
+
+volumes:
+  db:
